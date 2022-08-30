@@ -22,6 +22,7 @@ function Login() {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log(errorCode,errorMessage);
       });
       console.log("iniciar sesion ok");
     }
@@ -53,6 +54,7 @@ function Login() {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        console.log(errorCode,errorMessage);
         // ..
       });
 
@@ -60,7 +62,7 @@ function Login() {
   return (
     <div>
     {
-       registrado == true ? <>
+       registrado === true ? <>
                             <h2>iniciar sesion</h2>
                             <form onSubmit={iniciarSesion}>
                                 <input type="text" id='mail' />
