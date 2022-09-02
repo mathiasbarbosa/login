@@ -49,7 +49,6 @@ export default function FormRegistroPlan({user}) {
     // use efect para ver si existe el usuario
     useEffect(() => {
         async function fetchData(){
-            
             const docRef = doc(db, "usuarios", user.uid);
             const docSnap = await  getDoc(docRef);
     
@@ -63,7 +62,7 @@ export default function FormRegistroPlan({user}) {
         }
 
         fetchData()
-    },[])
+    },[user.uid])
 
   return (
         planRegistrado ? 
