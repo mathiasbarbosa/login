@@ -4,7 +4,7 @@ import firebaseCredenciales from '../firebase';
 import {getFirestore, doc, setDoc, getDoc} from "firebase/firestore"
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { async } from '@firebase/util';
+
 
 const db = getFirestore(firebaseCredenciales)
 
