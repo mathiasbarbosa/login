@@ -10,12 +10,12 @@ function App() {
   const [user, setUser] = useState(null)
   onAuthStateChanged(auth, (usuarioFirebase) => {
     usuarioFirebase ? setUser(usuarioFirebase) : setUser(null)
-    console.log("toy aca");
+    console.log(usuarioFirebase,"toy aca");
   })
 
   return (
     <div className="App">
-      {user ? <Home/> : <Login/> }
+      {user ? <Home user={user}/> : <Login/> }
         
     </div>
   );
